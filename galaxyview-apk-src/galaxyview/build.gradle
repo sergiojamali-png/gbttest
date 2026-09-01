@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace = 'ca.saboos.pos.galaxyview'
+    compileSdk = 36
+    buildToolsVersion = '36.0.0'
+
+    defaultConfig {
+        applicationId = 'ca.saboos.pos.galaxyview.test'
+        minSdk = 21
+        targetSdk = 28
+        versionCode = 1
+        versionName = '0.1.0-galaxy-view-pos-test'
+        buildConfigField 'String', 'START_URL', '"http://192.168.0.192:3003/"'
+    }
+
+    buildTypes {
+        debug {
+            debuggable = true
+            minifyEnabled = false
+        }
+        release {
+            minifyEnabled = false
+        }
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+}
